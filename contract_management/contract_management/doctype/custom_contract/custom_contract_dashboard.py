@@ -7,12 +7,8 @@ def get_data():
 		'fieldname': 'custom_contract',
 		'transactions': [
 			{
-				'label': _('Sales'),
-				'items': ['Quotation', 'Sales Order','Sales Invoice']
-			},
-			{
-				'label': _('Purchases'),
-				'items': ['Purchase Order', 'Purchase Invoice']
+				'label': _('Projects'),
+				'items': ['Project']
 			}
 		]
 	}
