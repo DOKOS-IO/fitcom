@@ -15,6 +15,22 @@ frappe.ui.form.on('Custom Contract', {
 		}else if (frm.doc.contract_series == "Sales Partner"){
 			frm.set_df_property('sales_partner', 'reqd', 1);
 		}
-
+	},
+	contract_template: function(frm) {
+		if (frm.doc.contract_template!=null){
+			frm.doc.contract_title = frm.doc.contract_template;
+		}
+	},
+	party_address: function(frm){
+		frappe.call({
+			method: "frappe.contacts.doctype.address.address.get_address_display",
+			args: {"address_dict": frm.doc.party_address },
+			callback: function(r) {
+				if(r.message) {
+					console.log(r.message);
+					frm.set_value("address_display", r.message);
+				}
+			}
+		})
 	}
 });
