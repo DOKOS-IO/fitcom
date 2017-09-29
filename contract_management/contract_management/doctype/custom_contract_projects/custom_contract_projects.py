@@ -5,7 +5,6 @@
 from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
-from contract_management.contract_management.doctype.custom_contract.custom_contract import change_bond_status
 
-class CustomContractBond(Document):
+class CustomContractProjects(Document):
 	pass
