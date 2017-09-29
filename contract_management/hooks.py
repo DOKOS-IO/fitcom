@@ -90,13 +90,15 @@ app_license = "GNU GPLv3"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"contract_management.tasks.all"
 # 	],
-# 	"daily": [
-# 		"contract_management.tasks.daily"
-# 	],
+ "daily": [
+ 	"contract_management.contract_management.doctype.custom_contract.custom_contract.change_bonds_status",
+    "contract_management.contract_management.doctype.custom_contract.custom_contract.change_warranties_status",
+    "contract_management.contract_management.doctype.custom_contract.custom_contract.change_contract_status"
+]
 # 	"hourly": [
 # 		"contract_management.tasks.hourly"
 # 	],
@@ -106,7 +108,7 @@ app_license = "GNU GPLv3"
 # 	"monthly": [
 # 		"contract_management.tasks.monthly"
 # 	]
-# }
+ }
 
 # Testing
 # -------
@@ -119,4 +121,3 @@ app_license = "GNU GPLv3"
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "contract_management.event.get_events"
 # }
-
