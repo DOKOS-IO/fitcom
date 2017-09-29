@@ -94,7 +94,7 @@ scheduler_events = {
 # 	"all": [
 # 		"contract_management.tasks.all"
 # 	],
- "daily": [
+ "hourly": [
  	"contract_management.contract_management.doctype.custom_contract.custom_contract.change_bonds_status",
     "contract_management.contract_management.doctype.custom_contract.custom_contract.change_warranties_status",
     "contract_management.contract_management.doctype.custom_contract.custom_contract.change_contract_status"
