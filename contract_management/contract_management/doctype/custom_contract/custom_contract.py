@@ -126,4 +126,4 @@ def change_contract_status():
 		if contract.contract_status=="Open":
 			renewal_date = getdate(contract.contract_end_date) - relativedelta(days=contract.alert_before_end_of_contract)
 			if renewal_date <= now_datetime().date():
-			 	frappe.db.set_value("Custom Contract", contract.name, "contract_status", "To be Renewed")
+			 	frappe.db.set_value("Custom Contract", contract.name, "contract_status", "Renewal")
